@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Date picker icon rengini değiştirmek için */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+}

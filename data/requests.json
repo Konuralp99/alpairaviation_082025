@@ -1,0 +1,56 @@
+[
+  {
+    "id": "req_1755537711009",
+    "receivedAt": "2025-08-18T17:21:51.009Z",
+    "plan": {
+      "departure": "LTAC",
+      "arrival": "LTFM",
+      "date": "2025-08-19",
+      "passengers": 1
+    },
+    "contact": {
+      "name": "Konuralp KÖSE",
+      "email": "konuralpkose@gmail.com",
+      "phone": "",
+      "note": "İlk fff",
+      "termsAccepted": true
+    },
+    "status": "Yeni"
+  },
+  {
+    "id": "req_1755543548915",
+    "receivedAt": "2025-08-18T18:59:08.915Z",
+    "plan": {
+      "departure": "LTAC",
+      "arrival": "LTFM",
+      "date": "2025-08-19",
+      "passengers": 1
+    },
+    "contact": {
+      "name": "Konuralp KÖSE",
+      "email": "konuralpkose@gmail.com",
+      "phone": "",
+      "note": "İlk Uçuşum olacak",
+      "termsAccepted": true
+    },
+    "status": "Yeni"
+  },
+  {
+    "id": "req_1755559187367",
+    "receivedAt": "2025-08-18T23:19:47.367Z",
+    "plan": {
+      "departure": "LTAC",
+      "arrival": "LTFM",
+      "date": "2025-08-20",
+      "passengers": 1
+    },
+    "contact": {
+      "name": "Konuralp KÖSE",
+      "email": "konuralpkose@gmail.com",
+      "phone": "",
+      "note": "Deneme",
+      "termsAccepted": true
+    },
+    "status": "Yeni"
+  }
+]

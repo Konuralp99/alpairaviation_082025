@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "question": "Ne kadar bagaj hakkım var?",
+    "answer": "Bagaj hakkı, seçilen hava aracının modeline ve yolcu sayısına göre değişiklik göstermektedir. Genellikle standart bir kabin boy bagaj ve bir kişisel eşyaya izin verilir. Özel bagaj talepleriniz için lütfen teklif formundaki notlar bölümünde belirtiniz."
+  },
+  {
+    "id": 2,
+    "question": "Kötü hava koşullarında uçuş iptal olur mu?",
+    "answer": "Güvenlik en büyük önceliğimizdir. Uçuş ekibimiz, meteorolojik koşulları sürekli olarak takip eder. Uçuşun güvenli olmadığına karar verilmesi durumunda, uçuş ertelenir veya iptal edilir. Bu durumda size en uygun alternatifler sunulacaktır."
+  },
+  {
+    "id": 3,
+    "question": "Uçuşumu nasıl iptal edebilir veya değiştirebilirim?",
+    "answer": "İptal ve değişiklik politikamız, uçuşunuza kalan süreye göre değişiklik göstermektedir. Detaylı bilgi için lütfen sözleşme koşullarını inceleyin veya doğrudan bizimle iletişime geçin. Size yardımcı olmaktan memnuniyet duyarız."
+  },
+  {
+    "id": 4,
+    "question": "Uçuş sırasında evcil hayvanımı yanıma alabilir miyim?",
+    "answer": "Evet, belirli koşullar altında evcil hayvanınızla seyahat edebilirsiniz. Evcil hayvanın boyutu, türü ve seçilen hava aracı bu koşulları belirler. Lütfen bu talebinizi rezervasyon sırasında bize bildirin."
+  }
+]

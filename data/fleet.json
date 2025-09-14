@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "model": "Airbus H125",
+    "description": "Yüksek performanslı, çok yönlü ve güvenilir tek motorlu helikopter. Turistik geziler ve VIP taşımacılık için ideal.",
+    "specs": {
+      "capacity": "5 Yolcu",
+      "speed": "260 km/s",
+      "range": "630 km"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1616707660919-4ac1cce77c1a?q=80&w=1470&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1616707660919-4ac1cce77c1a?q=80&w=1470&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1557924131-28f09520989f?q=80&w=1470&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1621135429292-5f3b79b6c037?q=80&w=1470&auto=format&fit=crop"
+    ],
+    "detailedSpecs": {
+      "Motor": "Safran Arriel 2D",
+      "Maksimum Kalkış Ağırlığı": "2,250 kg",
+      "Kabin Hacmi": "3.5 m³"
+    },
+    "usageAreas": ["VIP Transferler", "Panoramik Şehir Turları", "Hava Fotoğrafçılığı"]
+  },
+  {
+    "id": 2,
+    "model": "Bell 407",
+    "description": "Geniş kabini ve pürüzsüz uçuşuyla bilinen, kurumsal ve özel seyahatler için popüler bir model.",
+    "specs": {
+      "capacity": "6 Yolcu",
+      "speed": "245 km/s",
+      "range": "610 km"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1716918267272-8e3e81c9d836?q=80&w=1332&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1716918267272-8e3e81c9d836?q=80&w=1332&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1608625959953-aef63955a153?q=80&w=1470&auto=format&fit=crop"
+    ],
+    "detailedSpecs": {
+        "Motor": "Rolls-Royce 250-C47B/8",
+        "Maksimum Kalkış Ağırlığı": "2,722 kg",
+        "Kabin Hacmi": "4.1 m³"
+    },
+    "usageAreas": ["Şehirler Arası Ulaşım", "İş Seyahatleri", "Özel Etkinlikler"]
+  },
+  {
+    "id": 3,
+    "model": "Leonardo AW139",
+    "description": "Çift motorlu, geniş ve lüks kabiniyle en zorlu görevler için bile üstün güvenlik ve performans sunar.",
+    "specs": {
+      "capacity": "8 Yolcu",
+      "speed": "305 km/s",
+      "range": "1060 km"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1648110575888-5257b57f9d6e?q=80&w=1470&auto=format&fit=crop",
+    "gallery": [
+        "https://images.unsplash.com/photo-1648110575888-5257b57f9d6e?q=80&w=1470&auto=format&fit=crop"
+    ],
+    "detailedSpecs": {
+        "Motor": "2 x Pratt & Whitney PT6C-67C",
+        "Maksimum Kalkış Ağırlığı": "6,800 kg",
+        "Kabin Hacmi": "8.0 m³"
+    },
+    "usageAreas": ["Devlet ve VIP Taşımacılığı", "Acil Sağlık Hizmetleri", "Uzun Menzilli Uçuşlar"]
+  }
+]

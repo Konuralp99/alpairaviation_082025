@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Ahmet Y.",
+    "title": "CEO, Tech Solutions",
+    "quote": "ALPAIR AVIATION ile yaptığımız iş seyahati kusursuzdu. Pilotların profesyonelliği ve uçuşun konforu beklentilerimizin çok üzerindeydi. Kesinlikle tekrar tercih edeceğiz.",
+    "avatarUrl": "https://randomuser.me/api/portraits/men/32.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Elif S.",
+    "title": "Etkinlik Organizatörü",
+    "quote": "Özel bir etkinlik için helikopter turu organize ettik ve misafirlerimiz hayran kaldı. Planlama aşamasından uçuşun sonuna kadar her detay mükemmeldi. Teşekkürler!",
+    "avatarUrl": "https://randomuser.me/api/portraits/women/44.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Mehmet K.",
+    "title": "Özel Müşteri",
+    "quote": "Bodrum'a acil bir ulaşım gerektiğinde ALPAIR imdadıma yetişti. Hızları, esneklikleri ve sundukları güven hissi paha biçilmez. Hizmet kalitesi harika.",
+    "avatarUrl": "https://randomuser.me/api/portraits/men/47.jpg"
+  }
+]

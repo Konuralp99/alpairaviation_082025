@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "icon": "Briefcase",
+        "title": "VIP & Kurumsal Taşımacılık",
+        "description": "İş seyahatlerinizi, toplantılarınızı ve özel etkinliklerinizi en üst düzeyde konfor ve prestijle gerçekleştirin. Zaman yönetiminizi mükemmelleştirin."
+    },
+    {
+        "id": 2,
+        "icon": "Camera",
+        "title": "Panoramik Turlar ve Hava Fotoğrafçılığı",
+        "description": "Şehirlerin ve doğal güzelliklerin büyüleyici manzaralarını gökyüzünden keşfedin. Profesyonel çekimler ve unutulmaz anılar için ideal."
+    },
+    {
+        "id": 3,
+        "icon": "Heart",
+        "title": "Özel Günler ve Kutlamalar",
+        "description": "Evlilik teklifleri, düğünler, yıldönümleri... Hayatınızın en özel anlarını, gökyüzünde eşsiz bir deneyimle taçlandırın."
+    },
+    {
+        "id": 4,
+        "icon": "Map",
+        "title": "Hava Taksi ve Noktadan Noktaya Ulaşım",
+        "description": "Trafikten ve zaman kaybından kurtulun. Belirlediğiniz iki nokta arasında hızlı, güvenli ve esnek bir ulaşım çözümü sunuyoruz."
+    }
+]
