@@ -1,13 +1,10 @@
-const fs = require('fs').promises;
-const path = require('path');
-
-const dataPath = path.join(__dirname, '../../data');
-const requestsFilePath = path.join(dataPath, 'requests.json');
+const Request = require('../models/Request');
 
 exports.getAllRequests = async (req, res) => {
     try {
-        const data = await fs.readFile(requestsFilePath, 'utf-8');
-        res.json(JSON.parse(data));
+        const requests = await Request.find().sort({ receivedAt: -1 });
+        // Mongoose result objelerini JSON'a çevirip gönderir
+        res.json(requests);
     } catch (error) {
         console.error('Error reading requests:', error);
         res.status(500).json({ message: 'Sunucu hatası: Talepler alınamadı.' });
@@ -15,29 +12,23 @@ exports.getAllRequests = async (req, res) => {
 };
 
 exports.createRequest = async (req, res) => {
-    const newRequest = req.body;
-    if (!newRequest.plan || !newRequest.contact || !newRequest.contact.termsAccepted) {
+    const newRequestData = req.body;
+
+    // Basit validasyon (Middleware zaten yapıyor olabilir ama ekstra güvenlik)
+    if (!newRequestData.plan || !newRequestData.contact || !newRequestData.contact.termsAccepted) {
         return res.status(400).json({ message: 'Geçersiz talep verisi.' });
     }
 
     try {
-        let requests = [];
-        try {
-            const requestsData = await fs.readFile(requestsFilePath, 'utf-8');
-            if (requestsData.trim()) { requests = JSON.parse(requestsData); }
-        } catch (readError) {
-            if (readError.code !== 'ENOENT') throw readError;
-        }
-
-        const requestToSave = {
-            id: `req_${Date.now()}`,
-            receivedAt: new Date().toISOString(),
+        // Yeni talep oluştur
+        const request = new Request({
+            ...newRequestData,
             status: 'Yeni',
-            ...newRequest
-        };
-        requests.push(requestToSave);
-        await fs.writeFile(requestsFilePath, JSON.stringify(requests, null, 2), 'utf-8');
-        res.status(201).json({ success: true, message: 'Talebiniz başarıyla alınmıştır.' });
+            receivedAt: new Date()
+        });
+
+        await request.save();
+        res.status(201).json({ success: true, message: 'Talebiniz başarıyla alınmıştır.', id: request.id });
     } catch (error) {
         console.error('Error processing request:', error);
         res.status(500).json({ success: false, message: 'Talebiniz işlenirken bir hata oluştu.' });
@@ -53,19 +44,21 @@ exports.updateRequestStatus = async (req, res) => {
     }
 
     try {
-        const requestsData = await fs.readFile(requestsFilePath, 'utf-8');
-        let requests = JSON.parse(requestsData);
+        // Hem MongoDB _id hem de eski text id (req_...) ile bulmaya çalışalım
+        let request;
+        if (id.match(/^[0-9a-fA-F]{24}$/)) {
+            // Valid Mongo ID
+            request = await Request.findByIdAndUpdate(id, { status }, { new: true });
+        } else {
+            // Legacy ID (req_...)
+            request = await Request.findOneAndUpdate({ originalId: id }, { status }, { new: true });
+        }
 
-        const requestIndex = requests.findIndex(req => req.id === id);
-
-        if (requestIndex === -1) {
+        if (!request) {
             return res.status(404).json({ message: 'Talep bulunamadı.' });
         }
 
-        requests[requestIndex].status = status;
-
-        await fs.writeFile(requestsFilePath, JSON.stringify(requests, null, 2), 'utf-8');
-        res.json({ success: true, request: requests[requestIndex] });
+        res.json({ success: true, request });
 
     } catch (error) {
         console.error('Error updating request status:', error);

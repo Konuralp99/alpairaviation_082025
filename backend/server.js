@@ -8,8 +8,13 @@ const authRoutes = require('./routes/authRoutes');
 const dataRoutes = require('./routes/dataRoutes');
 const requestRoutes = require('./routes/requestRoutes');
 
+const connectDB = require('./db');
+
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Veritabanına Bağlan
+connectDB();
 
 app.use(helmet());
 app.use(cors());

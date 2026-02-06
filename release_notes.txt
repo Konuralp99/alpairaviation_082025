@@ -1,0 +1,28 @@
+# 🚁 AlpAir Aviation v1.0.0 - "Sky High" Release
+
+AlpAir Aviation projesinin ilk kararlı sürümü olan **v1.0.0** ile karşınızdayız! Bu sürüm, modern ve güvenli bir helikopter kiralama deneyimi için sağlam bir temel oluşturuyor.
+
+## 🌟 Öne Çıkan Yenilikler
+
+### 🛡️ Güçlendirilmiş Güvenlik
+- **JWT (JSON Web Token) Kimlik Doğrulama:** Admin paneli ve hassas işlemler artık askeri düzeyde (stateless) koruma altında.
+- **Helmet Entegrasyonu:** Sunucu tarafında HTTP başlıkları (headers) optimize edilerek olası saldırılara karşı kalkan oluşturuldu.
+- **Input Validation:** Gelen her veri, sunucuya ulaşmadan önce sıkı bir denetimden geçiyor.
+
+### ⚡ Performans ve Entegrasyon
+- **Merkezi API Yönetimi:** Frontend ve Backend arasındaki iletişim, dinamik yapılandırma dosyalarıyla tek merkezden yönetiliyor.
+- **Optimize Veritabanı:** Yerel JSON/SQLite yapısı, hızlı okuma/yazma işlemleri için optimize edildi.
+- **Bug Fixes:** Kritik hatalar giderildi ve kod tabanı temizlendi.
+
+### 🌍 Tam Yerelleştirme
+- Sistemin her noktası, hata mesajlarından kullanıcı bildirimlerine kadar akıcı bir Türkçe ile konuşuyor.
+
+## 🚀 Kurulum ve Test
+Bu sürümü test etmek için:
+1. Repoyu klonlayın.
+2. `npm install` ile bağımlılıkları yükleyin.
+3. `.env` dosyalarınızı yapılandırın.
+4. `npm run dev` ile uçuşa geçin!
+
+---
+*"Gökyüzü artık daha yakın."* - **AlpAir Aviation Ekibi**
