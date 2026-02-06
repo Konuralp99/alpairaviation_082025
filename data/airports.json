@@ -1,7 +1,22 @@
 [
-  { "code": "LTAC", "name": "Ankara Esenboğa Havalimanı (ESB)" },
-  { "code": "LTFM", "name": "İstanbul Havalimanı (IST)" },
-  { "code": "LTFE", "name": "İzmir Adnan Menderes Havalimanı (ADB)" },
-  { "code": "LTAI", "name": "Antalya Havalimanı (AYT)" },
-  { "code": "LTBJ", "name": "Bodrum Milas Havalimanı (BJV)" }
+    {
+        "code": "LTAC",
+        "name": "Esenboğa Havalimanı (Ankara)"
+    },
+    {
+        "code": "LTFM",
+        "name": "İstanbul Havalimanı"
+    },
+    {
+        "code": "LTFJ",
+        "name": "Sabiha Gökçen Havalimanı"
+    },
+    {
+        "code": "LTAI",
+        "name": "Antalya Havalimanı"
+    },
+    {
+        "code": "LTBJ",
+        "name": "Adnan Menderes Havalimanı (İzmir)"
+    }
 ]

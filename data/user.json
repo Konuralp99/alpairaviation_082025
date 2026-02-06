@@ -1,8 +1,8 @@
 {
-  "id": 1,
-  "name": "Konuralp Köse",
-  "role": "admin",
-  "username": "admin",
-  "password": "123", 
-  "lastLogin": "2025-08-18T18:00:00Z"
+    "id": 1,
+    "name": "Konuralp Köse",
+    "role": "admin",
+    "username": "admin",
+    "password": "123",
+    "lastLogin": "2025-08-18T18:00:00Z"
 }

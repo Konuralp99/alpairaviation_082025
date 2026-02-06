@@ -2,12 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer utilities {
+    .glass {
+        @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl;
+    }
+
+    .glass-dark {
+        @apply dark:bg-gray-900/40 dark:backdrop-blur-xl dark:border-white/10 dark:shadow-2xl;
+    }
+
+    .glass-card {
+        @apply glass glass-dark rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:border-white/40 hover:shadow-2xl hover:bg-white/15;
+    }
+
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent dark:from-blue-400 dark:to-yellow-400;
+    }
+
+    .btn-primary {
+        @apply bg-gradient-to-r from-primary to-primary-light text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-primary/50 hover:-translate-y-0.5 transition-all duration-300;
+    }
+
+    .btn-accent {
+        @apply bg-gradient-to-r from-accent to-yellow-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-accent/50 hover:-translate-y-0.5 transition-all duration-300;
+    }
 }
 
-/* Date picker icon rengini değiştirmek için */
-input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(0.8);
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 dark:bg-gray-600 rounded-full hover:bg-primary transition-colors;
+}
+
+/* Smooth Scrolling & Fixed Header Offset */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    /* Header yüksekliği kadar pay bırakır (Modern Çözüm) */
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 80px;
+        /* Mobilde header daha incedir */
+    }
 }

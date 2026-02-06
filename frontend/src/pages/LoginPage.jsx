@@ -1,6 +1,9 @@
 // frontend/src/pages/LoginPage.jsx
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 import { motion } from 'framer-motion';
+
+import { API_URL } from '../api/config';
 
 export const LoginPage = ({ onLoginSuccess }) => {
     const [username, setUsername] = useState('');
@@ -14,7 +17,7 @@ export const LoginPage = ({ onLoginSuccess }) => {
         setError('');
 
         try {
-            const response = await fetch('http://localhost:3001/api/login', {
+            const response = await fetch(`${API_URL}/api/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password }),
@@ -23,8 +26,11 @@ export const LoginPage = ({ onLoginSuccess }) => {
             if (!response.ok) {
                 throw new Error(result.message || 'Giriş yapılamadı.');
             }
+            sessionStorage.setItem('token', result.token);
             onLoginSuccess();
+            toast.success('Giriş başarılı! Hoşgeldiniz.');
         } catch (err) {
+            toast.error(err.message);
             setError(err.message);
         } finally {
             setIsLoading(false);
@@ -33,7 +39,7 @@ export const LoginPage = ({ onLoginSuccess }) => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="w-full max-w-md p-8 space-y-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
@@ -61,7 +67,7 @@ export const LoginPage = ({ onLoginSuccess }) => {
                         />
                     </div>
                     {error && <p className="text-sm text-center text-red-500">{error}</p>}
-                    <button 
+                    <button
                         type="submit"
                         disabled={isLoading}
                         className="w-full py-3 px-4 bg-accent text-white font-semibold rounded-lg hover:bg-accent-hover transition-colors disabled:opacity-50"
